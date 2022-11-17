@@ -2,7 +2,7 @@
  * @name DankEmotes
  * @author Majrik
  * @description Adds support for Twitch Emotes.
- * @version 0.3.4
+ * @version 0.3.5
  */
 
 let emotes = {};
@@ -102,6 +102,7 @@ const replaceNode = (node) => {
       };
 
       frg.append(clonedNode);
+      frg.append(" ");
     } else {
       frg.append(node);
     }
