@@ -2,15 +2,17 @@
  * @name DankEmotes
  * @author Majrik
  * @description Adds support for Twitch Emotes.
- * @version 0.3.5
+ * @version 0.3.6
  */
 
 let emotes = {};
 
 async function getEmotes() {
   const resp = await fetch(
-    "https://michalrodek.cz/betterdiscord/my_emotes.json",
-    { cache: "no-cache" }
+    "https://api.michalrodek.cz/betterdiscord/dankemotes.json",
+    {
+      cache: "no-cache",
+    }
   );
   emotes = await resp.json();
 }
