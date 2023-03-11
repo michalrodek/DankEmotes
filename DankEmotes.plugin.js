@@ -2,7 +2,7 @@
  * @name DankEmotes
  * @author Majrik
  * @description Adds support for Twitch Emotes.
- * @version 0.3.6
+ * @version 0.3.7
  */
 
 let emotes = {};
