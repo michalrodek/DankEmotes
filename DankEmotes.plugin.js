@@ -51,6 +51,8 @@ const replaceNode = (node) => {
 
   const foundEmotes = Object.keys(emotes.MyEmotes)
     .map((emote) => {
+      if (emote.includes(")")) return;
+
       if (
         emote.length > 3 &&
         node.textContent.match(new RegExp(`\\b${emote}\\b`))
