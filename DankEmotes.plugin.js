@@ -2,7 +2,7 @@
  * @name DankEmotes
  * @author Majrik
  * @description Adds support for Twitch Emotes.
- * @version 0.3.7
+ * @version 0.3.8
  */
 
 let emotes = {};
@@ -47,7 +47,7 @@ module.exports = () => ({
 });
 
 const replaceNode = (node) => {
-  if (node.nodeType !== 3) return;
+  if (node.nodeType !== 1) return;
 
   const foundEmotes = Object.keys(emotes.MyEmotes)
     .map((emote) => {
