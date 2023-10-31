@@ -2,7 +2,7 @@
  * @name DankEmotes
  * @author Majrik
  * @description Adds support for Twitch Emotes.
- * @version 0.3.8
+ * @version 0.3.9
  */
 
 let emotes = {};
@@ -26,9 +26,9 @@ module.exports = () => ({
     if (addedNodes.length > 0) {
       if (typeof addedNodes[0].className !== "string") return;
 
-      if (addedNodes[0].className?.includes("messageListItem-ZZ7v6g")) {
+      if (addedNodes[0].className?.includes("messageListItem__6a4fb")) {
         Array.from(
-          addedNodes[0].querySelector(".messageContent-2t3eCI").childNodes
+          addedNodes[0].querySelector(".messageContent__21e69").childNodes
         ).map((node) => {
           replaceNode(node);
         });
@@ -36,7 +36,7 @@ module.exports = () => ({
     }
   },
   onSwitch() {
-    Array.from(document.querySelectorAll(".messageContent-2t3eCI")).map(
+    Array.from(document.querySelectorAll(".messageContent__21e69")).map(
       (parentNode) => {
         Array.from(parentNode.childNodes).map((node) => {
           replaceNode(node);
